@@ -1,0 +1,110 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{newunicodechar}
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm}
+
+% ============================================================
+% Fallbacks para símbolos Unicode comuns em física/matemática
+% (o arquivo questoes.tex deve usar LaTeX puro, mas estas
+%  definições evitam erros fatais caso algum símbolo escape)
+% ============================================================
+\newunicodechar{√}{$\sqrt{\phantom{x}}$}
+\newunicodechar{≈}{$\approx$}
+\newunicodechar{≠}{$\neq$}
+\newunicodechar{≤}{$\leq$}
+\newunicodechar{≥}{$\geq$}
+\newunicodechar{×}{$\times$}
+\newunicodechar{·}{$\cdot$}
+\newunicodechar{°}{\ensuremath{{}^{\circ}}}
+\newunicodechar{²}{\textsuperscript{2}}
+\newunicodechar{³}{\textsuperscript{3}}
+\newunicodechar{¹}{\textsuperscript{1}}
+\newunicodechar{₀}{\textsubscript{0}}
+\newunicodechar{₁}{\textsubscript{1}}
+\newunicodechar{₂}{\textsubscript{2}}
+\newunicodechar{α}{$\alpha$}
+\newunicodechar{β}{$\beta$}
+\newunicodechar{γ}{$\gamma$}
+\newunicodechar{θ}{$\theta$}
+\newunicodechar{λ}{$\lambda$}
+\newunicodechar{μ}{$\mu$}
+\newunicodechar{π}{$\pi$}
+\newunicodechar{σ}{$\sigma$}
+\newunicodechar{τ}{$\tau$}
+\newunicodechar{φ}{$\varphi$}
+\newunicodechar{ω}{$\omega$}
+\newunicodechar{Δ}{$\Delta$}
+\newunicodechar{Ω}{$\Omega$}
+\newunicodechar{∞}{$\infty$}
+
+% ============================================================
+% Macros do QuestBank — compatibilidade com questoes.tex
+% Estas definições permitem compilar questoes.tex no Overleaf
+% sem modificar o arquivo original.
+% ============================================================
+
+% Contador de questões
+\newcounter{questaonum}
+
+% Ambiente questao{ID}: exibe número sequencial e ignora o ID
+\newenvironment{questao}[1]{%
+  \refstepcounter{questaonum}%
+  \vspace{1.2em}%
+  \noindent{\large\textbf{Questão \thequestaonum}}\par%
+  \vspace{0.4em}%
+}{%
+  \vspace{0.6em}%
+  \noindent{\color{gray!60}\rule{\linewidth}{0.3pt}}%
+  \vspace{0.2em}%
+}
+
+% \meta{campo}{valor} — metadados ignorados na impressão
+\newcommand{\meta}[2]{}
+
+% \enunciado{texto} — corpo da questão
+\newcommand{\enunciado}[1]{#1\par}
+
+% Ambiente alternativas (questões objetivas)
+\newenvironment{alternativas}{%
+  \begin{enumerate}[label=\textbf{(\Alph*)},
+                    leftmargin=1.8em,
+                    topsep=0.4em,
+                    partopsep=0em,
+                    itemsep=0.2em]%
+}{\end{enumerate}}
+
+% \alt{LETRA}{texto} — alternativa individual
+\newcommand{\alt}[2]{\item #2}
+
+% \gabarito{resposta} — exibido ao final da questão
+\newcommand{\gabarito}[1]{%
+  \par\vspace{0.4em}%
+  \noindent\textbf{\textcolor{gray}{Gabarito:}}\enspace\textit{#1}\par%
+}
+
+% \imagem{arquivo} — inclui imagem centralizada
+% O arquivo deve estar na raiz do ZIP, ao lado deste main.tex
+\newcommand{\imagem}[1]{%
+  \par\begin{center}%
+    \includegraphics[width=0.75\linewidth,keepaspectratio]{#1}%
+  \end{center}\par%
+}
+
+% \resolucao{url} — link externo, ignorado na impressão
+\newcommand{\resolucao}[1]{}
+
+% ============================================================
+
+\begin{document}
+
+\input{questoes}
+
+\end{document}
