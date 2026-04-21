@@ -73,18 +73,21 @@ logo depois dele explicando o que é — sem revelar a resposta nem dar pistas.
 **Exemplos corretos em LaTeX:**
 
 ```latex
-\imagem{grafico-energia.png}
+\imagem{Imagem1.png}
 
 O gráfico acima relaciona o custo (em centavos de real) e a quantidade de
 carbono liberado por diferentes fontes de energia.
 ```
 
 ```latex
-\imagem{sistema-blocos.png}
+\imagem{Imagem2.png}
 
 A figura representa um sistema com dois blocos conectados por uma corda sobre
 uma superfície plana.
 ```
+
+> **Nome de imagem na adaptada:** use **exatamente o mesmo** `\imagem{ImagemN.png}`
+> da questão regular mãe — nunca crie um nome novo para a versão adaptada.
 
 ---
 
@@ -171,7 +174,7 @@ Repita: `tipo`, `banca`, `ano`, `disciplina`, `topico`, `conteudo`, `assunto`.
     atmosfera. Entretanto, diferentes usinas de energia apresentam custos
     econômicos e ambientais distintos.
 
-    \imagem{grafico-energia.png}
+    \imagem{Imagem1.png}
 
     CAVALCANTE, R. O vilão virou herói. Superinteressante, jul. 2007.
 
@@ -205,7 +208,7 @@ Repita: `tipo`, `banca`, `ano`, `disciplina`, `topico`, `conteudo`, `assunto`.
   \meta{dificuldade}{facil}
 
   \enunciado{
-    \imagem{grafico-energia.png}
+    \imagem{Imagem1.png}
 
     O gráfico acima relaciona o custo (em centavos de real) e a quantidade
     de carbono liberado por diferentes fontes de energia.
@@ -238,6 +241,7 @@ Repita: `tipo`, `banca`, `ano`, `disciplina`, `topico`, `conteudo`, `assunto`.
 - [ ] `dificuldade` reduzida ou mantida conscientemente?
 - [ ] `\meta{tags}` deixado em branco (não preencher)?
 - [ ] **Não** digitou `(BANCA - ANO)` dentro de `\enunciado{}`?
+- [ ] Cada `\imagem{}` usa o **mesmo nome** (`Imagem1.png`, etc.) da questão regular mãe?
 - [ ] Cada `\imagem{}`, tabela ou texto motivador tem contextualização de 1–2 frases?
 - [ ] A contextualização **não revela a resposta nem dá pistas de raciocínio**?
 - [ ] Enunciado simplificado tem no máximo 3 frases?

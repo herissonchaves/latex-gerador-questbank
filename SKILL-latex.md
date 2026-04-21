@@ -41,9 +41,13 @@ questoes.zip/
 
 ### Regra de caminhos de imagem
 
-- Em `questoes.tex`: sempre `\imagem{nome.png}` — **só o nome do arquivo, nunca pasta**.
+- Em `questoes.tex`: sempre `\imagem{ImagemN.png}` — **só o nome do arquivo, nunca pasta**.
+- Use **numeração sequencial global**: `Imagem1.png`, `Imagem2.png`, `Imagem3.png`…
+  A contagem avança a cada nova imagem em todo o arquivo (não reinicia por questão).
+- **Nunca** use nomes descritivos (`grafico-energia.png`, `circuito.png`, etc.).
+- **Questões adaptadas reutilizam exatamente o mesmo nome** da imagem da regular mãe.
 - No ZIP: todas as imagens na **raiz** (ao lado de `questoes.tex` e `main.tex`).
-- O `main.tex` usa `\includegraphics{nome.png}` — encontra a imagem na mesma pasta.
+- O `main.tex` usa `\includegraphics{ImagemN.png}` — encontra a imagem na mesma pasta.
 - O parser QuestBank indexa imagens por basename — encontra independente de subpasta.
 
 ### ⚠ Unicode matemático é proibido em `questoes.tex`
@@ -90,7 +94,7 @@ permitidos e ignorados pelo parser.
 
     Quebra de parágrafo com linha em branco.
 
-    \imagem{energia.png}
+    \imagem{Imagem1.png}
 
     Outro parágrafo após a imagem.
   }
@@ -317,7 +321,7 @@ Ano como inteiro (ex: `2023`).
     atmosfera. Entretanto, diferentes usinas de energia apresentam custos
     econômicos e ambientais distintos.
 
-    \imagem{grafico-energia.png}
+    \imagem{Imagem1.png}
 
     Em relação aos custos associados às fontes energéticas apresentadas,
     a energia obtida a partir do vento é
@@ -346,7 +350,7 @@ Ano como inteiro (ex: `2023`).
   \meta{tags}{adaptada, NEE}
 
   \enunciado{
-    \imagem{grafico-energia.png}
+    \imagem{Imagem1.png}
 
     O gráfico acima relaciona o custo (em centavos de real) e a quantidade
     de carbono liberado por diferentes fontes de energia.
@@ -380,7 +384,9 @@ Ano como inteiro (ex: `2023`).
 - [ ] Discursivas têm `\gabarito{resposta}` (ou vazio)?
 - [ ] Fórmulas em `$...$` ou `$$...$$` fechadas?
 - [ ] Barras LaTeX únicas (sem `\\` no fonte)?
-- [ ] Imagens via `\imagem{nome.png}` — **só o nome do arquivo**, sem barra ou pasta?
+- [ ] Imagens via `\imagem{ImagemN.png}` — numeração sequencial global (`Imagem1.png`, `Imagem2.png`…)?
+- [ ] Nenhuma imagem com nome descritivo (`grafico-energia.png`, etc.)?
+- [ ] Questões adaptadas usam **o mesmo nome de imagem** da sua regular mãe?
 - [ ] Metadados preenchidos por pesquisa (nunca inventados)?
 - [ ] Não digitou `(BANCA - ANO)` manualmente (é automático)?
 - [ ] Nenhum símbolo Unicode matemático no `.tex` (₀ ≈ √ ° × π…)?

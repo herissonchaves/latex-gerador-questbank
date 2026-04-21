@@ -54,7 +54,7 @@ original. Isso significa:
 | Equação / fórmula inline | `$...$` |
 | Equação / fórmula em bloco | `$$...$$` |
 | Tabela de dados | `\begin{tabular}{ll...}...\end{tabular}` |
-| Figura / gráfico / imagem | `\imagem{nome-descritivo.png}` |
+| Figura / gráfico / imagem | `\imagem{ImagemN.png}` (numeração sequencial global) |
 | Texto motivador (trecho) | Preserve integralmente, antes da pergunta |
 | Referência bibliográfica | Parágrafo próprio após o trecho citado |
 | Travessão, meia-risca | `---` (—), `--` (–) |
@@ -72,14 +72,29 @@ O `construtor.py` insere `[IMAGEM]` onde havia figura/gráfico. No `.tex`,
 converta cada ocorrência para:
 
 ```latex
-\imagem{nome-descritivo.png}
+\imagem{Imagem1.png}
 ```
 
-Use um nome curto e descritivo (`grafico-energia.png`, `circuito.png`, etc.).
-O usuário repõe as imagens reais com esses nomes depois — ou ajusta o caminho
-antes de importar.
+### Regra de nomenclatura — numeração sequencial global
 
-Nunca remova o marcador nem descreva o conteúdo da imagem.
+- Use **numeração crescente** a partir de `Imagem1.png`, incrementando a cada
+  nova imagem encontrada ao longo de **todo o arquivo** `questoes.tex`
+  (não recomece a contagem por questão).
+- Exemplos: `Imagem1.png`, `Imagem2.png`, `Imagem3.png`, …
+- **Nunca** use nomes descritivos (`grafico-energia.png`, `circuito.png`, etc.).
+
+### Imagens em questões adaptadas
+
+A versão adaptada de uma questão **reutiliza exatamente o mesmo nome de
+arquivo** da sua questão regular mãe.
+
+| Regular | Adaptada |
+|---|---|
+| `\imagem{Imagem3.png}` | `\imagem{Imagem3.png}` ← mesmo nome |
+
+> O usuário repõe os arquivos físicos com os nomes `Imagem1.png`,
+> `Imagem2.png`, etc., na pasta correta. Nunca remova o marcador nem descreva
+> o conteúdo da imagem.
 
 ---
 

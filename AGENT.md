@@ -143,8 +143,10 @@ Para cada questão, escreva no arquivo:
 - **LaTeX puro**, não HTML. Toda `\` é única (sem `\\` do JSON).
 - **`(BANCA - ANO)` é automático** — o parser insere a partir de `\meta{banca}`
   e `\meta{ano}`. NÃO digite manualmente no `\enunciado`.
-- **Imagens** → `\imagem{nome-descritivo.png}` (caminho relativo ao `.tex`).
-  O usuário repõe os arquivos de imagem depois; você só escolhe um nome curto.
+- **Imagens** → `\imagem{ImagemN.png}` com **numeração sequencial global**
+  (`Imagem1.png`, `Imagem2.png`…). Nunca use nomes descritivos.
+  Questões adaptadas reutilizam o mesmo nome da regular mãe.
+  O usuário repõe os arquivos físicos com esses nomes depois.
 - **Tabelas de dados** → `\begin{tabular}{...}...\end{tabular}`.
 - **Textos motivadores** (citação, trecho de jornal/revista) → preserve
   integralmente antes do enunciado e mantenha a referência bibliográfica.
