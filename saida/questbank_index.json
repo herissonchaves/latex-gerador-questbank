@@ -1,0 +1,932 @@
+[
+  {
+    "id": "00001",
+    "banca": "UERJ",
+    "ano": 2025,
+    "chave": "uerj|2025|um dos animais de maior massa já identificados no planeta terra é a baleia azul admita que uma baleia dessa espécie tenh"
+  },
+  {
+    "id": "00002",
+    "banca": "UFPR",
+    "ano": 2024,
+    "chave": "ufpr|2024|uma plataforma plana horizontal tem uma área a sobre ela é colocado um objeto de massa m constante que fica estático no "
+  },
+  {
+    "id": "00003",
+    "banca": "FAMEMA",
+    "ano": 2023,
+    "chave": "famema|2023|um reservatório de água sem tampa apresentou uma trinca em seu fundo de tal forma que para repará lo teve de ser esvazia"
+  },
+  {
+    "id": "00004",
+    "banca": "UEA",
+    "ano": 2021,
+    "chave": "uea|2021|o reservatório do mocó foi criado para solucionar problemas no abastecimento de água na cidade de manaus nele dois imens"
+  },
+  {
+    "id": "00005",
+    "banca": "FMJ",
+    "ano": 2022,
+    "chave": "fmj|2022|um submarino tripulado chinês chamado fendouzhe ou lutador em português chegou a um dos pontos mais profundos dos oceano"
+  },
+  {
+    "id": "00006",
+    "banca": "PUC-RJ",
+    "ano": 2023,
+    "chave": "puc rj|2023|a pressão atmosférica na superfície de um lago é igual a 1 0 10 5 pa um mergulhador experimental mergulha nesse lago até"
+  },
+  {
+    "id": "00007",
+    "banca": "PUC-RJ",
+    "ano": 2022,
+    "chave": "puc rj|2022|dois garrafões idênticos são mantidos abertos à atmosfera e estão conectados por meio de um tubo muito fino a válvula qu"
+  },
+  {
+    "id": "00008",
+    "banca": "UEL",
+    "ano": 2024,
+    "chave": "uel|2024|a riobotz equipe de robótica da puc rio foi criada em 2003 quando estudantes orientados pelo professor marco antônio meg"
+  },
+  {
+    "id": "00009",
+    "banca": "UFMS",
+    "ano": 2022,
+    "chave": "ufms|2022|um cuteleiro decidiu presentear seu melhor amigo que é um grande admirador de ninjas e de samurais com uma espada especi"
+  },
+  {
+    "id": "00010",
+    "banca": "ITA",
+    "ano": 2023,
+    "chave": "ita|2023|considere um recipiente tubular fino com área transversal constante que contém dois líquidos imiscíveis a e b as hastes "
+  },
+  {
+    "id": "11",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||em um experimento para se observar a queda dos corpos dois sensores a e b foram abandonados de uma altura de 180 m sob a"
+  },
+  {
+    "id": "12",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma torneira mal fechada pinga em intervalos de tempo iguais a figura a seguir mostra a situação no instante em que uma "
+  },
+  {
+    "id": "13",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||o experimento científico de galileu galilei na torre de pisa é conhecido como um dos mais relevantes da história não há "
+  },
+  {
+    "id": "14",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma bola de basquete cai em queda livre após ficar momentaneamente em repouso sobre o aro da tabela considerando que a a"
+  },
+  {
+    "id": "15",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um grupo de estudantes realizou um teste envolvendo queda livre no prédio da escola sob supervisão de seus professores e"
+  },
+  {
+    "id": "16",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um juiz de futebol lança verticalmente uma moeda para cima com velocidade de 2 m s considerando g 10 m s 2 calcule o tem"
+  },
+  {
+    "id": "17",
+    "banca": "UPF",
+    "ano": "",
+    "chave": "upf||durante um experimento um estudante joga uma bola de tênis verticalmente para cima e observa sua trajetória até retornar"
+  },
+  {
+    "id": "18",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||para tentar descobrir a altura de uma árvore dois amigos fazem o seguinte teste um deles jogou uma pequena bola para cim"
+  },
+  {
+    "id": "19",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||do alto de uma plataforma de mergulho duas pedras são lançadas para baixo uma delas foi solta a partir do repouso e atin"
+  },
+  {
+    "id": "20",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma empresa de tecnologia aeroespacial está projetando um dispositivo que irá recolher amostras da atmosfera de marte o "
+  },
+  {
+    "id": "21",
+    "banca": "UEA",
+    "ano": 2022,
+    "chave": "uea|2022|a nasa space power facility é um laboratório que possui a maior câmara de vácuo do mundo no interior dessa câmara foi co"
+  },
+  {
+    "id": "22",
+    "banca": "PUC-RJ",
+    "ano": 2023,
+    "chave": "puc rj|2023|uma bola de massa 2 0 kg é lançada verticalmente para cima a partir do solo após 0 5 s sua velocidade é a metade daquela"
+  },
+  {
+    "id": "23",
+    "banca": "FGV",
+    "ano": "",
+    "chave": "fgv||uma pedra foi arremessada verticalmente para cima a partir do solo e permaneceu no ar por 4 s até regressar ao solo desp"
+  },
+  {
+    "id": "24",
+    "banca": "UTFPR",
+    "ano": "",
+    "chave": "utfpr||assinale o gráfico que melhor representa a velocidade em função do tempo durante uma queda livre desprezando a resistênc"
+  },
+  {
+    "id": "25",
+    "banca": "UNISINOS",
+    "ano": "",
+    "chave": "unisinos||uma pequena pedra é abandonada do repouso do alto de uma ponte 45 m acima do nível da água de um rio que passa por baixo"
+  },
+  {
+    "id": "26",
+    "banca": "UERJ",
+    "ano": "",
+    "chave": "uerj||o sistema solar é formado por planetas que apresentam diferentes acelerações da gravidade admita que um corpo é solto em"
+  },
+  {
+    "id": "27",
+    "banca": "FMC",
+    "ano": "",
+    "chave": "fmc||uma pedra é abandonada na beira de um abismo e desprezando se a resistência do ar cai sob a ação apenas da força gravita"
+  },
+  {
+    "id": "28",
+    "banca": "UECE",
+    "ano": "",
+    "chave": "uece||um objeto em queda livre percorre uma distância x durante o primeiro segundo de queda desprezando as forças resistivas e"
+  },
+  {
+    "id": "29",
+    "banca": "EEAR",
+    "ano": "",
+    "chave": "eear||um professor cronometra o tempo t_s que um objeto considerado um ponto material lançado a partir do solo verticalmente p"
+  },
+  {
+    "id": "30",
+    "banca": "UPE",
+    "ano": "",
+    "chave": "upe||do alto de um edifício de altura 20 0 m deixou se cair desde o repouso uma pequena esfera de aço ao mesmo tempo no chão "
+  },
+  {
+    "id": "31",
+    "banca": "EEAR",
+    "ano": 2016,
+    "chave": "eear|2016|ao término de uma formatura da eear um terceiro sargento recém formado para comemorar lançou seu quepe para cima na dire"
+  },
+  {
+    "id": "32",
+    "banca": "EFOMM",
+    "ano": 2018,
+    "chave": "efomm|2018|em um determinado instante um objeto é abandonado de uma altura h do solo e 2 0 segundos mais tarde outro objeto é aband"
+  },
+  {
+    "id": "33",
+    "banca": "UNICAMP",
+    "ano": 2015,
+    "chave": "unicamp|2015|recentemente uma equipe de astrônomos afirmou ter identificado uma estrela com dimensões comparáveis às da terra compost"
+  },
+  {
+    "id": "34",
+    "banca": "UNESP",
+    "ano": 2013,
+    "chave": "unesp|2013|em um dia de calmaria um garoto sobre uma ponte deixa cair verticalmente e a partir do repouso uma bola no instante t_0 "
+  },
+  {
+    "id": "35",
+    "banca": "IFSC",
+    "ano": 2016,
+    "chave": "ifsc|2016|joana uma dedicada agricultora colocou várias laranjas sobre uma mesa cuja altura é 0 80 text m considerando que uma des"
+  },
+  {
+    "id": "36",
+    "banca": "UPF",
+    "ano": 2021,
+    "chave": "upf|2021|uma criança brincando com um objeto lança o verticalmente para cima com velocidade de 25 text m s considerando o movimen"
+  },
+  {
+    "id": "37",
+    "banca": "UNISINOS",
+    "ano": 2022,
+    "chave": "unisinos|2022|uma pequena pedra é abandonada do repouso do alto de uma ponte 45 m acima do nível da água de um rio que passa por baixo"
+  },
+  {
+    "id": "38",
+    "banca": "ENEM",
+    "ano": 2022,
+    "chave": "enem|2022|em um dia de calor intenso dois colegas estão a brincar com a água da mangueira um deles quer saber até que altura o jat"
+  },
+  {
+    "id": "39",
+    "banca": "PUC-RJ",
+    "ano": 2015,
+    "chave": "puc rj|2015|uma bola é lançada com velocidade horizontal de 2 5 text m s do alto de um edifício e alcança o solo a 5 0 text m da bas"
+  },
+  {
+    "id": "40",
+    "banca": "CPS",
+    "ano": 2012,
+    "chave": "cps|2012|a cidade de pisa na itália teria sido palco de uma experiência hoje considerada fictícia de que galileu galilei do alto "
+  },
+  {
+    "id": "41",
+    "banca": "CFTMG",
+    "ano": 2016,
+    "chave": "cftmg|2016|um objeto é lançado para baixo na vertical do alto de um prédio de 15 m de altura em relação ao solo desprezando se a re"
+  },
+  {
+    "id": "42",
+    "banca": "IFSUL",
+    "ano": 2016,
+    "chave": "ifsul|2016|em uma experiência de cinemática estudantes analisaram o movimento de um objeto que foi lançado verticalmente para cima "
+  },
+  {
+    "id": "43",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma pessoa lança horizontalmente um disco para seu cachorro pegar no mesmo instante o animal inicia um movimento para al"
+  },
+  {
+    "id": "44",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||em um parque aquático há uma plataforma de mergulho cuja altura é 5 m posicionada no início dela uma pessoa irá correr a"
+  },
+  {
+    "id": "45",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||entregas por meio do uso de drones estão cada vez mais comuns em centros urbanos de países com maior grau de industriali"
+  },
+  {
+    "id": "46",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um garoto está treinando handebol e lança horizontalmente a bola que cai em direção ao solo ele está jogando em uma quad"
+  },
+  {
+    "id": "47",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um praticante de esportes radicais salta em um lago profundo do topo de um penhasco cuja altura é 11 25 m ele se lança p"
+  },
+  {
+    "id": "48",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um dardo é lançado horizontalmente com velocidade de 1 m s e ao atingir o alvo fixa se no alvo formando um ângulo de 45 "
+  },
+  {
+    "id": "49",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||em um jogo de futebol o goleiro efetua um tiro de meta lançando a bola além do meio do campo conforme mostra a figura a "
+  },
+  {
+    "id": "50",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma atleta realiza um lançamento de dardo que atinge 67 6 m de alcance isto é em 67 6 m o dardo retorna à altura inicial"
+  },
+  {
+    "id": "51",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um jogador de basquete lança uma bola que está a 2 m de altura com uma velocidade que forma um ângulo de 45 circ com a h"
+  },
+  {
+    "id": "52",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||em determinada tacada de golfe a bola é lançada com velocidade inicial de 30 m s formando um ângulo de 30 circ com a hor"
+  },
+  {
+    "id": "53",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||durante um treino um jogador de futebol efetua três lançamentos com mesma altura máxima como mostra a figura a seguir cl"
+  },
+  {
+    "id": "54",
+    "banca": "FUVEST",
+    "ano": 2020,
+    "chave": "fuvest|2020|um drone voando na horizontal em relação ao solo como indicado pelo sentido da seta na figura deixa cair um pacote de li"
+  },
+  {
+    "id": "55",
+    "banca": "MACKENZIE",
+    "ano": "",
+    "chave": "mackenzie||a figura a seguir representa um motociclista em movimento horizontal que decola de um ponto 80 cm acima do solo pousando"
+  },
+  {
+    "id": "56",
+    "banca": "PUC-RJ",
+    "ano": "",
+    "chave": "puc rj||da borda de um penhasco maria lança uma pedra horizontalmente para a frente a pedra cai de uma altura de 45 m e aterriss"
+  },
+  {
+    "id": "57",
+    "banca": "FICSAE",
+    "ano": 2024,
+    "chave": "ficsae|2024|em uma aula de tênis um aprendiz quando foi sacar lançou a bola verticalmente para cima e a golpeou com a raquete exatam"
+  },
+  {
+    "id": "58",
+    "banca": "UNESP",
+    "ano": 2022,
+    "chave": "unesp|2022|em treinamento para uma prova de trave olímpica uma atleta faz uma saída do aparelho representada em quatro imagens nume"
+  },
+  {
+    "id": "59",
+    "banca": "FCMSCSP",
+    "ano": 2022,
+    "chave": "fcmscsp|2022|como mostra a imagem a seguir em uma competição de saltos ornamentais uma atleta salta de uma plataforma e realiza movim"
+  },
+  {
+    "id": "60",
+    "banca": "FUVEST",
+    "ano": "",
+    "chave": "fuvest||um projétil é lançado com velocidade inicial vec v_0 v_ 0x vec i 30 vec j com componentes em unidades de m s qual deve s"
+  },
+  {
+    "id": "61",
+    "banca": "FEMPAR",
+    "ano": "",
+    "chave": "fempar||uma esfera de pequenas dimensões é lançada de uma elevação localizada a 25 m de altura com uma velocidade vec v_0 de mód"
+  },
+  {
+    "id": "62",
+    "banca": "UFGD",
+    "ano": 2021,
+    "chave": "ufgd|2021|a mostra brasileira de foguetes mobfog é realizada anualmente pela universidade do estado do rio de janeiro uerj em parc"
+  },
+  {
+    "id": "63",
+    "banca": "FUVEST",
+    "ano": "",
+    "chave": "fuvest||um jogador de basquete arremessa uma bola da altura de 2 m com velocidade vec v _ 0 10 vec i 10 vec j text m s estando a"
+  },
+  {
+    "id": "64",
+    "banca": "COTIL",
+    "ano": 2020,
+    "chave": "cotil|2020|muitos historiadores acreditam que a zarabatana foi um instrumento desenvolvido pelos índios da américa do sul para caça"
+  },
+  {
+    "id": "65",
+    "banca": "ACAFE",
+    "ano": 2020,
+    "chave": "acafe|2020|em um parque de diversões joão tenta ganhar um prêmio no jogo dos dardos para isso deve acertar um ponto situado na peri"
+  },
+  {
+    "id": "66",
+    "banca": "UEFS",
+    "ano": 2018,
+    "chave": "uefs|2018|da borda de uma mesa uma esfera é lançada horizontalmente de uma altura h com velocidade inicial v_0 após cair livre de "
+  },
+  {
+    "id": "68",
+    "banca": "UFRGS",
+    "ano": 2020,
+    "chave": "ufrgs|2020|dois projéteis são disparados simultaneamente no vácuo a partir da mesma posição no solo com ângulos de lançamento difer"
+  },
+  {
+    "id": "69",
+    "banca": "UFRGS",
+    "ano": 2018,
+    "chave": "ufrgs|2018|dois objetos de massas m_1 e m_2 onde m_2 2m_1 encontram se na borda de uma mesa de altura h em relação ao solo conforme"
+  },
+  {
+    "id": "70",
+    "banca": "UFJF",
+    "ano": 2019,
+    "chave": "ufjf|2019|ao localizar refugiados em um local plano no deserto o governo de um país do oriente médio resolve utilizar um avião par"
+  },
+  {
+    "id": "71",
+    "banca": "UNISINOS",
+    "ano": 2017,
+    "chave": "unisinos|2017|anita a e bianca b estão no alto de um edifício de altura h ambas arremessam bolinhas de gude horizontalmente conforme m"
+  },
+  {
+    "id": "72",
+    "banca": "FAMEMA",
+    "ano": 2017,
+    "chave": "famema|2017|um helicóptero sobrevoa horizontalmente o solo com velocidade constante e no ponto a abandona um objeto de dimensões des"
+  },
+  {
+    "id": "73",
+    "banca": "FMP",
+    "ano": 2016,
+    "chave": "fmp|2016|um jogador de futebol chuta uma bola sem provocar nela qualquer efeito de rotação a resistência do ar é praticamente des"
+  },
+  {
+    "id": "74",
+    "banca": "UFRGS",
+    "ano": 2015,
+    "chave": "ufrgs|2015|em uma região onde a aceleração da gravidade tem módulo constante um projétil é disparado a partir do solo em uma direçã"
+  },
+  {
+    "id": "75",
+    "banca": "MACKENZIE",
+    "ano": 2015,
+    "chave": "mackenzie|2015|um zagueiro chuta uma bola na direção do atacante de seu time descrevendo uma trajetória parabólica desprezando se a res"
+  },
+  {
+    "id": "76",
+    "banca": "ESPCEX",
+    "ano": 2014,
+    "chave": "espcex|2014|uma esfera é lançada com velocidade horizontal constante de módulo v 5 m s da borda de uma mesa horizontal ela atinge o "
+  },
+  {
+    "id": "77",
+    "banca": "CFTMG",
+    "ano": 2013,
+    "chave": "cftmg|2013|uma pedra é lançada para cima a partir do topo e da borda de um edifício de 16 8 m de altura a uma velocidade inicial v_"
+  },
+  {
+    "id": "78",
+    "banca": "ESC. NAVAL",
+    "ano": 2013,
+    "chave": "esc naval|2013|os gráficos abaixo foram obtidos da trajetória de um projétil sendo y a distância vertical e x a distância horizontal pe"
+  },
+  {
+    "id": "A-00001",
+    "banca": "UERJ",
+    "ano": 2025,
+    "chave": "uerj|2025|um dos animais de maior massa já identificados no planeta terra é a baleia azul admita que uma baleia dessa espécie tenh"
+  },
+  {
+    "id": "A-00002",
+    "banca": "UFPR",
+    "ano": 2024,
+    "chave": "ufpr|2024|uma plataforma plana horizontal tem uma área a um objeto de massa m 600 g é colocado sobre ela exercendo uma pressão de "
+  },
+  {
+    "id": "A-00003",
+    "banca": "FAMEMA",
+    "ano": 2023,
+    "chave": "famema|2023|um reservatório começou a vazar quando o nível da água atingiu 2 m considere a pressão atmosférica igual a 1 10 5 pa a g"
+  },
+  {
+    "id": "A-00004",
+    "banca": "UEA",
+    "ano": 2021,
+    "chave": "uea|2021|disponível em https www guiamanaus 24h blospot com a imagem ilustra os grandes reservatórios elevados da cidade de manau"
+  },
+  {
+    "id": "A-00005",
+    "banca": "FMJ",
+    "ano": 2022,
+    "chave": "fmj|2022|o submarino fendouzhe chegou a 10 900 metros de profundidade a pressão interna no submarino é igual à pressão atmosféric"
+  },
+  {
+    "id": "A-00006",
+    "banca": "PUC-RJ",
+    "ano": 2023,
+    "chave": "puc rj|2023|um mergulhador mergulha até uma profundidade em que a pressão total sentida por ele é de 3 vezes a pressão atmosférica s"
+  },
+  {
+    "id": "A-00007",
+    "banca": "PUC-RJ",
+    "ano": 2022,
+    "chave": "puc rj|2022|a imagem mostra dois garrafões ligados à mesma base por um tubo com uma válvula o da esquerda tem óleo e o da direita te"
+  },
+  {
+    "id": "A-00008",
+    "banca": "UEL",
+    "ano": 2024,
+    "chave": "uel|2024|suponha que um robô de combate de massa 18 kg colida contra uma parede o choque dura 9 ms e ocorre usando o bico da lanç"
+  },
+  {
+    "id": "A-00009",
+    "banca": "UFMS",
+    "ano": 2022,
+    "chave": "ufms|2022|um artesão forjou uma espada utilizando 210 g de prata densidade de 10 5 g cm 3 386 g de ouro 19 3 g cm 3 e 1365 g de aç"
+  },
+  {
+    "id": "A-00010",
+    "banca": "ITA",
+    "ano": 2023,
+    "chave": "ita|2023|o diagrama descreve um recipiente tubular fino em formato de vaso comunicante com hastes espaçadas por l 20 cm ele possu"
+  },
+  {
+    "id": "A11",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a imagem ilustra os sensores a e b sendo derrubados de uma altura dois sensores a e b foram deixados cair de uma altura "
+  },
+  {
+    "id": "A12",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||na figura há pingos de água caindo de uma torneira e as distâncias entre eles são marcadas como a e b uma torneira está "
+  },
+  {
+    "id": "A13",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||o experimento científico de galileu galilei na torre de pisa é conhecido como um dos mais relevantes da história não há "
+  },
+  {
+    "id": "A14",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma bola de basquete da altura do aro da tabela cai livremente para o chão perfeitamente livre de forças adversas a altu"
+  },
+  {
+    "id": "A15",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a imagem revela a fachada de um prédio com estudantes realizando a captação através de câmeras nos andares de baixo e la"
+  },
+  {
+    "id": "A16",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um juiz de futebol vai iniciar a partida efetuando o lançamento de uma moeda verticalmente para cima e esta tem velocida"
+  },
+  {
+    "id": "A17",
+    "banca": "UPF",
+    "ano": "",
+    "chave": "upf||durante um projeto de experimento lançou se uma bola de tênis verticalmente em direção ao céu e ela posteriormente caiu "
+  },
+  {
+    "id": "A18",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||dois amigos jogam uma bola verticalmente tentando chegar perfeitamente ao topo de uma árvore o tempo total da bola subid"
+  },
+  {
+    "id": "A19",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||existem duas pedras que são lançadas para a água do alto da plataforma a inicial foi perfeitamente solta do repouso e at"
+  },
+  {
+    "id": "A20",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um dispositivo lançou verticalmente um dispositivo de forma rápida na terra para testar as suas subidas e efetuará o exa"
+  },
+  {
+    "id": "A21",
+    "banca": "UEA",
+    "ano": 2022,
+    "chave": "uea|2022|a instituição nasa space power facility contém a gigantesca forma da maior câmara laboratorial de um enorme vácuo contid"
+  },
+  {
+    "id": "A22",
+    "banca": "PUC-RJ",
+    "ano": 2023,
+    "chave": "puc rj|2023|lança se no céu e sempre vindo de baixo uma bola da massa com 2 0 kg e então após se passar no decorrer do tempo 0 5 seg"
+  },
+  {
+    "id": "A23",
+    "banca": "FGV",
+    "ano": "",
+    "chave": "fgv||o objeto sólido a pedra permaneceu ao voo pelo tempo contado por cravados 4 segundos após um arremesso direto logo em se"
+  },
+  {
+    "id": "A24",
+    "banca": "UTFPR",
+    "ano": "",
+    "chave": "utfpr||para verificar formas e também traços variados e precisos contidos no padrão para objetos arremessados num trajeto de qu"
+  },
+  {
+    "id": "A25",
+    "banca": "UNISINOS",
+    "ano": "",
+    "chave": "unisinos||ao cair abandonado ao nível repousado numa ponte esse pequeno e simples pedaço de mineral teve de descer cerca de quaren"
+  },
+  {
+    "id": "A26",
+    "banca": "UERJ",
+    "ano": "",
+    "chave": "uerj||a tabela apresenta planetas do sistema solar e quanto vale a sua respectiva e real da atração gravitacional agindo diret"
+  },
+  {
+    "id": "A27",
+    "banca": "FMC",
+    "ano": "",
+    "chave": "fmc||duas pedras minúsculas são postas perto a frente à margem livre de abismos as atirado ao limbo separadamente mas juntas "
+  },
+  {
+    "id": "A28",
+    "banca": "UECE",
+    "ano": "",
+    "chave": "uece||encontra se a grandeza misteriosa e chamada com nome de x em um espaço físico marcando um distanciamento nos testes aére"
+  },
+  {
+    "id": "A29",
+    "banca": "EEAR",
+    "ano": "",
+    "chave": "eear||existem cronômetros no poder do professor e o mesmo usou as táticas medindo tempo do ts esse no ar voo que o deslocou at"
+  },
+  {
+    "id": "A30",
+    "banca": "UPE",
+    "ano": "",
+    "chave": "upe||pronto ao chão fica o edifício grande totalizado sendo tendo de cume de altura medido tendo exatos seus 20m completos de"
+  },
+  {
+    "id": "A31",
+    "banca": "EEAR",
+    "ano": 2016,
+    "chave": "eear|2016|um quepe é lançado verticalmente para cima e sobe até 9 8 m de altura a aceleração da gravidade é g 10 text m s 2 e o ar"
+  },
+  {
+    "id": "A32",
+    "banca": "EFOMM",
+    "ano": 2018,
+    "chave": "efomm|2018|dois objetos são soltos em queda livre com 2 segundos de diferença o segundo parte de um ponto 120 m abaixo do primeiro "
+  },
+  {
+    "id": "A33",
+    "banca": "UNICAMP",
+    "ano": 2015,
+    "chave": "unicamp|2015|uma estrela tem tamanho parecido com o da terra um objeto solto em repouso a 54 m de altura leva 3 0 s para cair até a s"
+  },
+  {
+    "id": "A34",
+    "banca": "UNESP",
+    "ano": 2013,
+    "chave": "unesp|2013|a figura mostra cinco posições de uma bola em queda livre registradas em intervalos de tempo iguais entre a terceira e a"
+  },
+  {
+    "id": "A35",
+    "banca": "IFSC",
+    "ano": 2016,
+    "chave": "ifsc|2016|uma laranja cai de uma mesa de 0 80 m de altura sem resistência do ar queda livre o que podemos afirmar sobre o moviment"
+  },
+  {
+    "id": "A36",
+    "banca": "UPF",
+    "ano": 2021,
+    "chave": "upf|2021|um objeto é lançado para cima com velocidade inicial de 25 m s use g 10 text m s 2 qual é o módulo da velocidade do obje"
+  },
+  {
+    "id": "A37",
+    "banca": "UNISINOS",
+    "ano": 2022,
+    "chave": "unisinos|2022|uma pedra cai de uma ponte a 45 m de altura uma embarcação em movimento constante está a 12 m do ponto de impacto quando"
+  },
+  {
+    "id": "A38",
+    "banca": "ENEM",
+    "ano": 2022,
+    "chave": "enem|2022|dois colegas usam uma mangueira para descobrir a altura que o jato de água atinge eles posicionam a mangueira na horizon"
+  },
+  {
+    "id": "A39",
+    "banca": "PUC-RJ",
+    "ano": 2015,
+    "chave": "puc rj|2015|uma bola é lançada horizontalmente do topo de um edifício com velocidade de 2 5 text m s e cai a 5 0 text m da base use "
+  },
+  {
+    "id": "A40",
+    "banca": "CPS",
+    "ano": 2012,
+    "chave": "cps|2012|a figura mostra a famosa torre de pisa local de um experimento atribuído a galileu ele teria soltado ao mesmo tempo duas"
+  },
+  {
+    "id": "A41",
+    "banca": "CFTMG",
+    "ano": 2016,
+    "chave": "cftmg|2016|um objeto é lançado verticalmente para baixo do topo de um prédio de 15 m ele chega ao solo com velocidade de 20 m s use"
+  },
+  {
+    "id": "A42",
+    "banca": "IFSUL",
+    "ano": 2016,
+    "chave": "ifsul|2016|um objeto é lançado verticalmente para cima a partir do solo ele passa por um mesmo ponto duas vezes subindo 0 5 s após "
+  },
+  {
+    "id": "A43",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||imagem a imagem mostra uma pessoa lançando um disco na horizontal e um cachorro correndo para pegá lo antes do objeto ca"
+  },
+  {
+    "id": "A44",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a figura ilustra uma pessoa correndo sobre uma plataforma a 5 metros de altura da água e saltando para frente com veloci"
+  },
+  {
+    "id": "A45",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a imagem mostra um drone voando para a frente e largando um pacote entregas por meio do uso de drones estão cada vez mai"
+  },
+  {
+    "id": "A46",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||um menino lança uma bola para frente o sol está bem acima de sua cabeça iluminando a bola como é possível descrever a ve"
+  },
+  {
+    "id": "A47",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a figura ilustra um homem saltando de um penhasco alto em direção à água uma pessoa pula em um lago a partir de uma altu"
+  },
+  {
+    "id": "A48",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||imagem a figura indica um dardo sendo atirado até ficar preso em um alvo formando um ângulo com a horizontal um dardo é "
+  },
+  {
+    "id": "A49",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a imagem descreve a trajetória curva parabólica de uma bola de futebol chutada por um goleiro num tiro de meta desprezan"
+  },
+  {
+    "id": "A50",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||uma atleta consegue lançar um dardo a uma distância de 67 6 m em relação ao ponto de arremesso o ângulo do lançamento fo"
+  },
+  {
+    "id": "A51",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a figura ilustra um arremesso de basquete efetuado do ponto x ao aro y um jogador lança uma bola de basquete de uma altu"
+  },
+  {
+    "id": "A52",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a imagem reproduz a trajetória de uma bola de golfe recém rebatida e percorrendo o ar uma bola recebe uma tacada e parte"
+  },
+  {
+    "id": "A53",
+    "banca": "Desconhecida",
+    "ano": "",
+    "chave": "desconhecida||a figura mostra as trajetórias do lançamento de 3 bolas todas as 3 trajetórias alcançam exatamente a mesma altura vertic"
+  },
+  {
+    "id": "A54",
+    "banca": "FUVEST",
+    "ano": 2020,
+    "chave": "fuvest|2020|a figura descreve um pequeno helicóptero drone sobrevoando o solo horizontalmente para a frente e deixando cair um pacot"
+  },
+  {
+    "id": "A55",
+    "banca": "MACKENZIE",
+    "ano": "",
+    "chave": "mackenzie||a ilustração exibe uma rampa que finaliza na altura de 80 cm 0 8 metros dali um motociclista é lançado percorrendo 6 met"
+  },
+  {
+    "id": "A56",
+    "banca": "PUC-RJ",
+    "ano": "",
+    "chave": "puc rj||atirando de cima de um desfiladeiro de 45 metros de altura desde o solo maria acaba espedaçando uma pedra ao jogá la int"
+  },
+  {
+    "id": "A57",
+    "banca": "FICSAE",
+    "ano": 2024,
+    "chave": "ficsae|2024|na figura nota se um atleta espalmando a raquete em uma bola verde ao ar visando arremessá la ao longe do piso da quadra"
+  },
+  {
+    "id": "A58",
+    "banca": "UNESP",
+    "ano": 2022,
+    "chave": "unesp|2022|a imagem sequencial aborda 4 quadros exibindo a perda do elo de uma atleta frente sua base olímpica num exercício acrobá"
+  },
+  {
+    "id": "A59",
+    "banca": "FCMSCSP",
+    "ano": 2022,
+    "chave": "fcmscsp|2022|o painel mostra o decaimento gradual das alturas assumidas nos vários rodopios estelares ornamentais exercidos com períc"
+  },
+  {
+    "id": "A60",
+    "banca": "FUVEST",
+    "ano": "",
+    "chave": "fuvest||ao calibrar a engenharia propulsória com forças vetoriais para subir os ares nas direções do plano horizontal v_ 0x e al"
+  },
+  {
+    "id": "A61",
+    "banca": "FEMPAR",
+    "ano": "",
+    "chave": "fempar||o quadro mostra um arco parabólico iniciado de uma rampa a 25 metros submersa e atingindo final do impacto para solo vaz"
+  },
+  {
+    "id": "A62",
+    "banca": "UFGD",
+    "ano": 2021,
+    "chave": "ufgd|2021|a representação demonstra a base a partindo frente ao marco linear b distando um total exato do ponto demarcado b e fech"
+  },
+  {
+    "id": "A63",
+    "banca": "FUVEST",
+    "ano": "",
+    "chave": "fuvest||na imagem se percebe nitidamente as arestas das linhas parabólicas do percurso refletido logo aos toques na estrutura de"
+  },
+  {
+    "id": "A64",
+    "banca": "COTIL",
+    "ano": 2020,
+    "chave": "cotil|2020|sabendo que muitos historiadores acreditam que a zarabatana foi um instrumento desenvolvido pelos índios da américa do s"
+  },
+  {
+    "id": "A65",
+    "banca": "ACAFE",
+    "ano": 2020,
+    "chave": "acafe|2020|a imagem mostra uma pessoa atirando um dardo mirando no centro de um alvo de raio circular de 45 cm que está girando ele"
+  },
+  {
+    "id": "A66",
+    "banca": "UEFS",
+    "ano": 2018,
+    "chave": "uefs|2018|a figura ilustra uma bola sendo rolada de uma mesa de altura h ela cai fazendo a curva até atingir o chão rolando a uma "
+  },
+  {
+    "id": "A67",
+    "banca": "FUVEST",
+    "ano": 2020,
+    "chave": "fuvest|2020|imagem na imagem é demonstrado as várias diretrizes por onde pode despencar e finalizar um objeto abandonado no vazio da"
+  },
+  {
+    "id": "A68",
+    "banca": "UFRGS",
+    "ano": 2020,
+    "chave": "ufrgs|2020|a coleção aborda dados que comprovam o desenrolar das saídas num disparo frente no eixo y ao lado simultaneamente de um "
+  },
+  {
+    "id": "A69",
+    "banca": "UFRGS",
+    "ano": 2018,
+    "chave": "ufrgs|2018|a representação esboça dois itens em paralelo por limites a borda num espaço aquele que despencar sob empurro na base se"
+  },
+  {
+    "id": "A70",
+    "banca": "UFJF",
+    "ano": 2019,
+    "chave": "ufjf|2019|o gráfico em tela exibe o tempo 10 s como abscissa e o alto alcançado de 500 para marcar a descida em curva como ordenad"
+  },
+  {
+    "id": "A71",
+    "banca": "UNISINOS",
+    "ano": 2017,
+    "chave": "unisinos|2017|o gráfico exibe duas mulheres atirando esferas horizontalmente a bola posta por quem jogou 2 vezes superior no embalo va"
+  },
+  {
+    "id": "A72",
+    "banca": "FAMEMA",
+    "ano": 2017,
+    "chave": "famema|2017|a imagem sequencial aborda momentos alternativos a se passar perante o avançar do voo contante sobre frentes do helicópt"
+  },
+  {
+    "id": "A73",
+    "banca": "FMP",
+    "ano": 2016,
+    "chave": "fmp|2016|a figura descreve um goleiro com o esférico no avanço pós saque efetuado rumando curvas na frente e um vetor horizontal "
+  },
+  {
+    "id": "A74",
+    "banca": "UFRGS",
+    "ano": 2015,
+    "chave": "ufrgs|2015|a demarcação exibe o diagrama v times t e ilustrações demonstrando uma bala com canhão de voo isento às curvas dos mares"
+  },
+  {
+    "id": "A75",
+    "banca": "MACKENZIE",
+    "ano": 2015,
+    "chave": "mackenzie|2015|o zagueiro de uma equipe mandou os chutes a um amigo tático em seu limite a prumo das subidas esféricas em pleno campo p"
+  },
+  {
+    "id": "A76",
+    "banca": "ESPCEX",
+    "ano": 2014,
+    "chave": "espcex|2014|a representação demonstra a base a partindo com velocidade frente v 5 text m s ao marco d distando um total de 5 metros "
+  },
+  {
+    "id": "A77",
+    "banca": "CFTMG",
+    "ano": 2013,
+    "chave": "cftmg|2013|tirada uma alavancagem de um bloco em pedras fixas do patamar fixo sem recuos perante um edifício exatos do 16 8 m acima"
+  },
+  {
+    "id": "A78",
+    "banca": "ESC. NAVAL",
+    "ano": 2013,
+    "chave": "esc naval|2013|na imagem exibe duas ilustrações gráficas sem referências explícitas numeradas nos limites exatos na leitura aos dados t"
+  }
+]

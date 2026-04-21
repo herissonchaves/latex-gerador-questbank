@@ -95,7 +95,27 @@ Se não houver duplicatas: `✅ X questões incluídas. Nenhuma duplicata encont
   continue **sem** deduplicação — não interrompa o processamento.
 - `saida/questbank_index.json` é descartável — não versionado.
 - A comparação usa: `banca normalizada | ano | primeiros 120 chars do texto`.
-  HTML e LaTeX são normalizados para texto puro antes de comparar.
+
+### Como a chave de comparação é gerada (ordem obrigatória)
+
+> ⚠️ Alterar essa ordem reintroduz bugs conhecidos — não modifique sem entender o motivo.
+
+1. **`strip_html()` primeiro** — remove tags HTML do enunciado bruto *antes* de qualquer regex.
+   O banco armazena enunciados com HTML (`<p>`, `<b>`, etc.). Se o HTML não for removido primeiro,
+   o regex de prefixo `(BANCA - ANO)` falha porque encontra `<p>(FAMEMA - 2020)</p>` em vez de
+   `(FAMEMA - 2020)` no início da string.
+
+2. **Regex de prefixo depois** — remove `(BANCA - ANO)` e `(BANCA)` do início do texto já limpo.
+
+3. **`normalizar()` por último** — lowercase e remoção de pontuação sobre o texto já sem prefixo.
+
+### Tolerância de ano desconhecido
+
+Quando o PDF não traz o ano da questão, o agente registra `ano = "0"`. O script trata `"0"` e
+`""` como **"ano desconhecido"** em ambos os lados da comparação: se qualquer um dos dois for
+`"0"` ou vazio, o critério de ano é ignorado e a detecção cai apenas sobre banca + texto.
+
+Isso evita falsos negativos do tipo: questão com `ano=0` na entrada vs `ano=2020` no banco.
 
 ## Checklist
 

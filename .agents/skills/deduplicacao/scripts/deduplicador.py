@@ -51,11 +51,17 @@ def chave(banca: str, ano, texto_bruto: str, n: int = 120) -> str:
     banca_norm = normalizar(str(banca or ""))
     ano_norm   = str(ano or "").strip()
 
+    # Remove HTML first
+    texto_limpo = strip_html(texto_bruto)
     # Remove prefixo automático "(BANCA - ANO)" se presente no início
     texto_sem_prefixo = re.sub(
-        r"^\s*\(\s*[^)]+\s*-\s*\d{4}\s*\)\s*", "", texto_bruto
+        r"^\s*\(\s*[^)]+\s*-\s*\d{4}\s*\)\s*", "", texto_limpo
     )
-    texto_norm = normalizar(strip_html(texto_sem_prefixo))[:n]
+    # Remove simple (BANCA) prefix if present
+    texto_sem_prefixo = re.sub(
+        r"^\s*\(\s*[^)]+\s*\)\s*", "", texto_sem_prefixo
+    )
+    texto_norm = normalizar(texto_sem_prefixo)[:n]
 
     return f"{banca_norm}|{ano_norm}|{texto_norm}"
 
@@ -120,7 +126,7 @@ def check(banca: str, ano: str, trecho: str):
         ano_banco     = item["chave"].split("|")[1]
 
         if (banca_entrada == banca_banco
-                and ano_entrada == ano_banco
+                and (ano_entrada == ano_banco or ano_entrada == "0" or ano_banco == "0" or ano_entrada == "" or ano_banco == "")
                 and len(texto_entrada) >= 40
                 and (texto_entrada in texto_banco or texto_banco in texto_entrada)):
             print(f"DUPLICATA:{item['id']}")

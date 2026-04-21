@@ -1,0 +1,14 @@
+{
+  "modo": "lite-fiel",
+  "gerado_em": "2026-04-21T21:26:42.509458+00:00",
+  "pasta_entrada": "entrada",
+  "total_arquivos": 1,
+  "nota": "Extração fiel com Tesseract OCR: negrito, itálico, sublinhado, alinhamento e equações preservados. Imagens/figuras substituídas por [IMAGEM].",
+  "arquivos": [
+    {
+      "arquivo": "CINEMÁTICA – LISTA 6 - A12 - Lanç. Horizontal e Oblíquo- Plataforma FINAL.pdf",
+      "status": "ok",
+      "texto_extraido_arquivo": "saida\\CINEMÁTICA – LISTA 6 - A12 - Lanç. Horizontal e Oblíquo- Plataforma FINAL_extraido.txt"
+    }
+  ]
+}
