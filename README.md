@@ -21,26 +21,34 @@ O entregável final é **`saida/questoes.zip`** — um ZIP dual-compatível:
 - **Backslash único** (`\frac`, `\text`) — sem o inferno de `\\` do JSON.
 - **Fórmulas legíveis** e diff amigável no git.
 - **Comentários** (`%`) permitidos — úteis para notas.
-- **Imagens** por caminho relativo (`\imagem{grafico.png}`).
 
 ---
 
 ## Estrutura do projeto
 
 ```
-conversor-questoes-questbank/
+latex-gerador-questbank/
 ├── AGENT.md               ← orquestração do agente Antigravity
 ├── README.md              ← este arquivo
-├── SKILL-latex.md         ← formato .tex + taxonomia + regras de metadados
-├── SKILL-segmentador.md   ← como segmentar questões do texto extraído
-├── SKILL-adaptacao.md     ← regras de adaptação NEE/AEE em LaTeX
-├── construtor.py          ← extrator de texto (PDF/DOCX/imagem/HTML)
 ├── main.tex               ← wrapper LaTeX padrão para compilação no Overleaf
 ├── entrada/               ← coloque aqui seus arquivos de prova
-└── saida/
-    ├── questoes.tex       ← DSL QuestBank (gerado pelo agente)
-    ├── main.tex           ← cópia do wrapper (gerada pelo agente)
-    └── questoes.zip       ← entregável final (gerado pelo agente)
+├── saida/
+│   ├── questoes.tex       ← DSL QuestBank (gerado pelo agente)
+│   ├── main.tex           ← cópia do wrapper (gerada pelo agente)
+│   └── questoes.zip       ← entregável final (gerado pelo agente)
+└── .agents/
+    └── skills/
+        ├── extrator/           ← extrai texto dos arquivos de prova
+        │   └── scripts/
+        │       └── construtor.py
+        ├── segmentador/        ← identifica e segmenta as questões
+        ├── deduplicacao/       ← filtra questões já existentes no banco
+        │   └── scripts/
+        │       └── deduplicador.py
+        ├── formatador-latex/   ← regras LaTeX + geração do ZIP
+        │   └── scripts/
+        │       └── montador.py
+        └── adaptacao/          ← gera versão NEE/AEE de cada questão
 ```
 
 ---
@@ -54,27 +62,36 @@ conversor-questoes-questbank/
 ### 2. Adicionar as provas
 - Coloque PDFs, DOCXs, imagens ou HTMLs na pasta `entrada/`.
 
-### 3. Iniciar
+### 3. (Opcional) Evitar duplicatas
+- Se quiser que o agente ignore questões já cadastradas no QuestBank,
+  coloque o arquivo de backup `*.questbank.json` (exportado pelo app) na
+  raiz do projeto ou em `entrada/`.
+
+### 4. Iniciar
 No chat do Antigravity, basta dizer:
 
+```
 Leia o AGENT.md. Converta os arquivos da pasta entrada em questões LaTeX para o QuestBank.
+```
 
 Não é necessário informar nenhum ID — o agente gera IDs aleatórios automaticamente.
 
-### 4. Resultado
+### 5. Resultado
 - `saida/questoes.zip` — entregável final, dual-compatível com QuestBank e Overleaf.
 - O ZIP contém `questoes.tex`, `main.tex` e todas as imagens encontradas.
 - Questões com `\imagem{...}` cujos arquivos não foram localizados aparecem
-  listadas no log; adicione as imagens ao ZIP manualmente antes de importar.
+  listadas no log — adicione as imagens ao ZIP manualmente antes de importar.
+- Se houver backup `.questbank.json`: o agente lista ao final quais questões
+  foram ignoradas por já existirem no banco.
 
-### 5. Importar no QuestBank
+### 6. Importar no QuestBank
 - Rode o servidor local `questbank-server`.
 - No app, arraste `saida/questoes.zip` para o importador.
 - O app extrai o `.tex`, envia ao servidor Python, converte para JSON, insere
   `(BANCA - ANO)` automaticamente e substitui os IDs aleatórios por IDs
   sequenciais definitivos a partir do último ID do banco.
 
-### 5b. Abrir no Overleaf (opcional)
+### 7. Abrir no Overleaf (opcional)
 - Acesse overleaf.com → New Project → Upload Project.
 - Envie `saida/questoes.zip`.
 - O Overleaf compilará `main.tex` automaticamente → PDF com todas as questões.
@@ -85,8 +102,7 @@ Não é necessário informar nenhum ID — o agente gera IDs aleatórios automat
 
 O agente gera **IDs aleatórios de 6 dígitos** (100000–999999) para cada par
 regular + adaptada. Os IDs são temporários — o QuestBank os substitui por
-sequenciais definitivos a partir do último ID cadastrado no banco durante a
-importação.
+sequenciais definitivos durante a importação.
 
 | Questão | ID no `.tex` (temporário) | ID após importação (definitivo) |
 |---|---|---|
@@ -95,19 +111,16 @@ importação.
 | Regular nº 2 | `193057` (aleatório) | sequencial do banco |
 | Adaptada nº 2 | `A-193057` | `A` + ID da regular |
 
-O prefixo `A-` é o sinal que o QuestBank usa para reconhecer a relação
-filha-mãe entre a adaptada e a regular durante a importação.
-
 ---
 
 ## Formatos de arquivo suportados (entrada)
 
 | Formato | Extensão | Texto extraído | Imagens |
 |---|---|---|---|
-| PDF | `.pdf` | ✅ | `[IMAGEM]` → `\imagem{...}` |
-| Word | `.docx` `.doc` | ✅ | `[IMAGEM]` → `\imagem{...}` |
-| Imagem | `.png` `.jpg` `.jpeg` etc. | OCR (Tesseract) | `[IMAGEM]` → `\imagem{...}` |
-| HTML | `.html` `.htm` | ✅ | `[IMAGEM]` → `\imagem{...}` |
+| PDF | `.pdf` | ✅ | `[IMAGEM]` → `\imagem{ImagemN.png}` |
+| Word | `.docx` `.doc` | ✅ | `[IMAGEM]` → `\imagem{ImagemN.png}` |
+| Imagem | `.png` `.jpg` `.jpeg` etc. | OCR (Tesseract) | `[IMAGEM]` → `\imagem{ImagemN.png}` |
+| HTML | `.html` `.htm` | ✅ | `[IMAGEM]` → `\imagem{ImagemN.png}` |
 
 ---
 
@@ -126,9 +139,6 @@ filha-mãe entre a adaptada e a regular durante a importação.
   - Windows: https://github.com/UB-Mannheim/tesseract/wiki
   - macOS: `brew install tesseract tesseract-lang`
   - Linux: `sudo apt install tesseract-ocr tesseract-ocr-por`
-
-O `construtor.py` detecta o Tesseract nos caminhos padrão (Program Files,
-Homebrew, `/usr/bin`).
 
 ---
 
@@ -151,7 +161,7 @@ Homebrew, `/usr/bin`).
   \enunciado{
     O uso de equipamentos elétricos custa dinheiro e libera carbono.
 
-    \imagem{grafico-energia.png}
+    \imagem{Imagem1.png}
 
     Em relação aos custos, a energia obtida a partir do vento é
   }
@@ -176,10 +186,9 @@ Homebrew, `/usr/bin`).
   \meta{conteudo}{Fontes de energia}
   \meta{assunto}{Energia eólica}
   \meta{dificuldade}{facil}
-  \meta{tags}{adaptada, NEE}
 
   \enunciado{
-    \imagem{grafico-energia.png}
+    \imagem{Imagem1.png}
 
     O gráfico relaciona o custo e o carbono liberado por fontes de energia.
 
@@ -197,4 +206,3 @@ Homebrew, `/usr/bin`).
 ```
 
 O parser transforma o `questoes.tex` em HTML com `(ENEM - 2020)` já no início do enunciado.
-# latex-gerador-questbank
