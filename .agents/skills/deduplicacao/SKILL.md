@@ -89,7 +89,7 @@ Se não houver duplicatas: `✅ X questões incluídas. Nenhuma duplicata encont
 
 ---
 
-## Regras
+## Regras e restrições
 
 - Se o script falhar (erro Python, arquivo corrompido): avise o usuário e
   continue **sem** deduplicação — não interrompa o processamento.

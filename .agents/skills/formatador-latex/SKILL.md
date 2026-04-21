@@ -24,6 +24,30 @@ QuestBank e o Overleaf. O agente **não** gera JSON — único formato de saída
 - `main.tex` na raiz do projeto (wrapper Overleaf — não editar)
 - Imagens referenciadas pelos marcadores `[IMAGEM]` nos textos extraídos
 
+## Saída esperada
+
+- `saida/questoes.tex` — DSL QuestBank com todos os blocos `\begin{questao}`
+- `saida/questoes.zip` — ZIP dual-compatível gerado pelo `montador.py`
+
+## Passo a passo
+
+1. Gerar todos os IDs aleatórios de uma vez (ver seção "IDs aleatórios").
+2. Para cada questão: escrever bloco regular seguido do bloco adaptado (`A-ID`).
+3. Usar as tabelas de macros, taxonomia e regras abaixo como referência durante a escrita.
+4. Validar `questoes.tex` contra o checklist antes de prosseguir.
+5. Executar `montador.py` para empacotar o ZIP (ver seção "Gerar o ZIP").
+
+## Regras e restrições
+
+- **Unicode matemático proibido** — sempre LaTeX puro (`$\pi$`, `$\times$`, etc.).
+- **Imagens**: `\imagem{ImagemN.png}` — só o nome, nunca subpasta; numeração sequencial global.
+- **Nunca** use nomes descritivos de imagem (`grafico-energia.png`, etc.).
+- **Nunca** escreva `(BANCA - ANO)` manualmente no `\enunciado` — o parser insere automaticamente.
+- **IDs**: aleatórios de 6 dígitos (100000–999999) — nunca sequenciais com zeros à esquerda.
+- **`\meta{tags}`**: deixar sempre em branco — não preencher.
+- **Barras LaTeX**: simples (`\frac`), nunca duplas (`\\frac`).
+- **Metadados**: pesquisar no texto ou em sites oficiais — jamais inventar.
+
 ---
 
 ## ZIP dual-compatível (`saida/questoes.zip`)

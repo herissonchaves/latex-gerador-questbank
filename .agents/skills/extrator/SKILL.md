@@ -32,7 +32,7 @@ Opções disponíveis (rode `--help` para ver todas):
 python .agents/skills/extrator/scripts/construtor.py --help
 ```
 
-## O que o script faz
+## Passo a passo
 
 1. Varre `entrada/` em busca de arquivos suportados
 2. Extrai texto preservando: negrito, itálico, tabelas, fórmulas matemáticas
@@ -49,7 +49,7 @@ python .agents/skills/extrator/scripts/construtor.py --help
 | Imagens de prova | `.png`, `.jpg`, `.jpeg`, `.webp` |
 | HTML | `.html`, `.htm` |
 
-## Saídas geradas
+## Saída esperada
 
 ```
 saida/

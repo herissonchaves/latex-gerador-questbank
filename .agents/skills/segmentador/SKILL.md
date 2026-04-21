@@ -113,6 +113,15 @@ Ordem de busca (jamais invente — use padrão se não encontrar):
 Gabaritos ao final costumam aparecer como `1-A  2-C  3-B` ou `1. B    2. D`.
 Associe cada gabarito à questão pelo número e preencha `\gabarito{LETRA}`.
 
+## Regras e restrições
+
+- **Nunca** resuma, parafraseie ou omita trechos do enunciado original.
+- `[IMAGEM]` → `\imagem{ImagemN.png}` com numeração **sequencial global** (não reinicia por questão).
+- Nomes de imagem: apenas `Imagem1.png`, `Imagem2.png`… — nunca nomes descritivos.
+- Questões adaptadas reutilizam o **mesmo nome** de imagem da regular mãe.
+- Banca e ano: buscar no texto ou em sites oficiais — **jamais inventar**.
+- `(BANCA - ANO)` **nunca** escrito manualmente dentro de `\enunciado{...}`.
+
 ## Checklist de segmentação
 
 - [ ] Todas as questões foram identificadas?

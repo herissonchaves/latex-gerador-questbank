@@ -1,3 +1,20 @@
+#!/usr/bin/env python3
+"""
+montador.py — Empacotador ZIP dual-compatível para o workflow QuestBank.
+
+OBJETIVO: montar saida/questoes.zip com os arquivos necessários para importação
+no app QuestBank e compilação no Overleaf:
+  - questoes.tex  → DSL customizada lida pelo servidor questbank-server
+  - main.tex      → wrapper Overleaf (copiado da raiz do projeto)
+  - ImagemN.png   → imagens referenciadas em questoes.tex (sempre na raiz do ZIP)
+
+Pré-requisito: main.tex deve estar na raiz do projeto e saida/questoes.tex
+deve ter sido gerado pelo agente no Passo 3 do workflow.
+
+Uso (sempre a partir da raiz do projeto):
+    python .agents/skills/formatador-latex/scripts/montador.py
+"""
+
 import zipfile, os, re, shutil
 
 TEX_PATH  = 'saida/questoes.tex'

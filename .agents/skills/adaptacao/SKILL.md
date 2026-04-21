@@ -57,7 +57,7 @@ mas **jamais** indicar a resposta ou sugerir raciocínio.
 
 ---
 
-## Regras de adaptação
+## Regras e restrições
 
 ### Regra 1 — Contextualizar TODOS os elementos visuais e motivadores
 
