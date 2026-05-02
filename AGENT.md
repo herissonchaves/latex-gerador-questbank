@@ -26,7 +26,10 @@ a DSL em JSON no momento da importação.
 - Imagens: `\imagem{Imagem1.png}`, `\imagem{Imagem2.png}`… numeração sequencial
   global. Adaptadas reutilizam o **mesmo nome** da regular mãe.
 - **Nunca** use Unicode matemático no `.tex` (₀ ≈ √ ° × π…). Use LaTeX puro.
-- `(BANCA - ANO)` é automático — nunca escreva dentro de `\enunciado{...}`.
+- Se `\meta{banca}{}` estiver preenchido (valor diferente de `Desconhecida` e não vazio),
+  escreva `(BANCA)` ou `(BANCA - ANO)` **no início do `\enunciado`**, antes do texto da questão.
+  Inclua o ano apenas se `\meta{ano}{}` for diferente de `0` e não estiver vazio.
+  Exemplos: `(UECE - 2020)` · `(FUVEST)` · `(ENEM - 2019)`
 - Se um arquivo não puder ser lido: registre no log e continue.
 - Entregável final: `saida/questoes.zip` — não apenas o `.tex`.
 - Após gerar o ZIP: apresente sempre o relatório de deduplicação.

@@ -42,7 +42,10 @@ QuestBank e o Overleaf. O agente **não** gera JSON — único formato de saída
 - **Unicode matemático proibido** — sempre LaTeX puro (`$\pi$`, `$\times$`, etc.).
 - **Imagens**: `\imagem{ImagemN.png}` — só o nome, nunca subpasta; numeração sequencial global.
 - **Nunca** use nomes descritivos de imagem (`grafico-energia.png`, etc.).
-- **Nunca** escreva `(BANCA - ANO)` manualmente no `\enunciado` — o parser insere automaticamente.
+- **Banca no enunciado**: se `\meta{banca}{}` estiver preenchido (valor diferente de `Desconhecida`
+  e não vazio), escreva `(BANCA)` ou `(BANCA - ANO)` **no início do `\enunciado`**.
+  Inclua o ano apenas se `\meta{ano}{}` for diferente de `0` e não vazio.
+  Exemplos: `(UECE - 2020)` · `(FUVEST)` · `(ENEM - 2019)`
 - **IDs**: aleatórios de 6 dígitos (100000–999999) — nunca sequenciais com zeros à esquerda.
 - **`\meta{tags}`**: deixar sempre em branco — não preencher.
 - **Barras LaTeX**: simples (`\frac`), nunca duplas (`\\frac`).
@@ -101,7 +104,7 @@ questoes.zip/
   \meta{dificuldade}{medio}
 
   \enunciado{
-    Texto do enunciado em LaTeX puro.
+    (ENEM - 2020) Texto do enunciado em LaTeX puro.
 
     \imagem{Imagem1.png}
 
@@ -172,7 +175,9 @@ ids = random.sample(range(100000, 1000000), n)
 | `---`, `--` | `—`, `–` |
 | `\_\_\_\_` | `____` (linha de resposta em discursivas) |
 
-> O parser insere `(BANCA - ANO)` automaticamente. **Não adicione manualmente.**
+> **Regra de banca no enunciado:** se `\meta{banca}{}` estiver preenchido (valor diferente de
+> `Desconhecida` e não vazio), escreva `(BANCA)` ou `(BANCA - ANO)` **no início do `\enunciado`**,
+> antes do texto da questão. Inclua o ano apenas se `\meta{ano}{}` for diferente de `0` e não vazio.
 
 ---
 
@@ -251,6 +256,7 @@ O script lê `saida/questoes.tex`, encontra as imagens referenciadas, copia
 - [ ] Fórmulas em `$...$` ou `$$...$$` fechadas?
 - [ ] Barras LaTeX únicas (sem `\\`)?
 - [ ] Nenhum símbolo Unicode matemático (₀ ≈ √ ° × π…)?
-- [ ] `(BANCA - ANO)` não digitado manualmente?
+- [ ] Se banca ≠ `Desconhecida` e não vazia: `(BANCA)` ou `(BANCA - ANO)` escrito no início do `\enunciado`?
+- [ ] Ano incluído somente se `\meta{ano}{}` ≠ `0` e não vazio?
 - [ ] Metadados pesquisados (nunca inventados)?
 - [ ] Nenhuma questão duplicada incluída no arquivo?
