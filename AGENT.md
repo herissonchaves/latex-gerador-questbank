@@ -52,11 +52,16 @@ saber quais arquivos foram processados.
 Siga a skill **`segmentador`**: identifique cada questão nos `*_extraido.txt`,
 extraia enunciado, alternativas, gabarito, tipo, banca e ano.
 
-### Passo 2.5 — Verificar duplicatas _(se houver `*.questbank.json`)_
+### Passo 2.5 — Verificar duplicatas _(obrigatório)_
 
-Procure por `*.questbank.json` na raiz ou em `entrada/`. Se encontrado, siga a
-skill **`deduplicacao`** para filtrar questões já existentes no banco.
-Questões duplicadas não entram no `.tex` (nem regular nem adaptada).
+Sempre tente deduplicar contra o backup do app. Siga a skill **`deduplicacao`**:
+
+1. Procure pelo `.questbank.json` mais recente em **`backup/`**
+   (auto-descoberto pelo comando `build` sem argumento).
+2. Se encontrado: construa o índice e filtre as questões segmentadas.
+   Questões duplicadas **não entram** no `.tex` (nem regular nem adaptada).
+3. Se a pasta `backup/` estiver vazia: **avise o usuário** e siga sem
+   deduplicação, registrando o aviso no relatório final.
 
 ### Passo 3 — Escrever `saida/questoes.tex`
 
@@ -78,8 +83,10 @@ Confirme que nenhuma questão duplicada está no arquivo.
 
 ### Passo 5 — Gerar o ZIP
 
+Siga a skill **`empacotador-zip`**:
+
 ```bash
-python .agents/skills/formatador-latex/scripts/montador.py
+python .agents/skills/empacotador-zip/scripts/montador.py
 ```
 
 Produz `saida/questoes.zip` com `questoes.tex` + `main.tex` + imagens na raiz.
@@ -95,8 +102,9 @@ latex-gerador-questbank/
 ├── AGENT.md
 ├── README.md
 ├── main.tex                        ← wrapper Overleaf (não editar)
-├── *.questbank.json                ← backup do QuestBank (opcional)
-├── entrada/                        ← PDFs, DOCXs, imagens, backups .questbank.json
+├── entrada/                        ← PDFs, DOCXs, imagens, HTMLs das provas
+├── backup/                         ← último .questbank.json exportado pelo app
+│   └── questbank-backup-*.questbank.json
 ├── saida/                          ← resultados gerados pelo agente
 │   ├── manifest.json
 │   ├── *_extraido.txt
@@ -113,10 +121,11 @@ latex-gerador-questbank/
         ├── deduplicacao/           ← Passo 2.5: filtrar duplicatas
         │   └── scripts/
         │       └── deduplicador.py
-        ├── formatador-latex/       ← Passo 3/4/5: LaTeX + ZIP
-        │   └── scripts/
-        │       └── montador.py
-        └── adaptacao/              ← Passo 3: versão NEE/AEE
+        ├── formatador-latex/       ← Passo 3/4: regras .tex + checklist
+        ├── adaptacao/              ← Passo 3: versão NEE/AEE
+        └── empacotador-zip/        ← Passo 5: empacotar questoes.zip
+            └── scripts/
+                └── montador.py
 ```
 
 ## Skills disponíveis
@@ -126,5 +135,6 @@ latex-gerador-questbank/
 | `extrator` | Passo 1 — extrair texto dos arquivos de entrada |
 | `segmentador` | Passo 2 — identificar e extrair questões do texto bruto |
 | `deduplicacao` | Passo 2.5 — verificar duplicatas contra o banco |
-| `formatador-latex` | Passo 3/4/5 — escrever `.tex`, regras LaTeX, gerar ZIP |
+| `formatador-latex` | Passo 3/4 — escrever `.tex` e validar regras LaTeX |
 | `adaptacao` | Passo 3 — gerar versão NEE/AEE de cada questão regular |
+| `empacotador-zip` | Passo 5 — empacotar `questoes.zip` (TeX + main + imagens) |

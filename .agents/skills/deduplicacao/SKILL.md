@@ -3,9 +3,11 @@ name: deduplicacao
 description: >
   Verifica se questões dos arquivos de entrada já existem no banco QuestBank
   antes de incluí-las no questoes.tex. Use esta skill no Passo 2.5 do workflow,
-  sempre que houver um arquivo *.questbank.json na raiz do projeto ou em entrada/.
-  Executa deduplicador.py para construir o índice do banco e verificar cada
-  questão segmentada, excluindo duplicatas do .tex e gerando relatório final.
+  SEMPRE — é obrigatória. O agente procura automaticamente o .questbank.json
+  mais recente na pasta backup/ e constrói o índice. Se a pasta estiver vazia,
+  avisa o usuário e segue sem deduplicação. Executa deduplicador.py para
+  verificar as questões segmentadas (modo batch para lotes >5, single-shot
+  para casos pontuais), excluindo duplicatas do .tex e gerando relatório final.
 ---
 
 # Deduplicação contra o Banco QuestBank
@@ -18,8 +20,11 @@ Questões identificadas como duplicatas são silenciosamente excluídas do
 
 ## Entradas esperadas
 
-- `*.questbank.json` na raiz do projeto ou em `entrada/` (backup exportado pelo app)
+- `*.questbank.json` mais recente em **`backup/`** (backup exportado pelo app QuestBank)
 - Lista de questões segmentadas (Passo 2) — enunciado em texto puro, banca e ano de cada questão
+
+> **Localização canônica do backup:** `backup/`. Não procure em outros lugares.
+> O usuário foi orientado a depositar sempre o backup mais recente nessa pasta.
 
 ## Saída esperada
 
@@ -31,36 +36,86 @@ Questões identificadas como duplicatas são silenciosamente excluídas do
 
 ## Passo a passo
 
-### Passo 1 — Localizar o backup
+### Passo 1 — Localizar o backup em `backup/`
+
+O caminho canônico é a pasta `backup/` na raiz do projeto. O script faz a
+descoberta automaticamente — basta rodar `build` sem argumento (próximo passo).
+
+Para auditar manualmente antes:
 
 ```bash
-find . -name "*.questbank.json" | head -5
+python .agents/skills/deduplicacao/scripts/deduplicador.py discover
 ```
 
-- Se **não encontrar**: pule esta skill inteiramente e continue para o Passo 3.
-- Se encontrar **mais de um**: use o de data mais recente (pelo nome do arquivo).
+Saídas possíveis:
+
+| Resultado | Ação |
+|---|---|
+| Imprime o caminho do backup mais recente | Continue para o Passo 2 |
+| Sai com erro "nenhum *.questbank.json em backup/" | **Avise o usuário** que a deduplicação será pulada e siga direto para o Passo 3 do workflow principal (formatador-latex), incluindo todas as questões |
 
 ### Passo 2 — Construir o índice
 
 ```bash
-python .agents/skills/deduplicacao/scripts/deduplicador.py build <backup.questbank.json>
+python .agents/skills/deduplicacao/scripts/deduplicador.py build
 ```
+
+Sem argumento, o script usa o backup mais recente em `backup/`.
+(Para casos especiais, é possível passar um caminho explícito.)
 
 Gera `saida/questbank_index.json`. Verifique se o número de questões indexadas
 bate com o campo `stats.questions` do JSON de backup.
 
-### Passo 3 — Verificar cada questão antes de incluir no `.tex`
+### Passo 3 — Verificar todas as questões em uma única chamada (preferido)
 
-Para cada questão segmentada, execute **antes** de escrever o bloco LaTeX:
+Para qualquer lote com **mais de 5 questões**, use o modo batch — uma única
+chamada Python classifica todas de uma vez, evitando N cold starts.
+
+**Monte um JSON com todas as questões segmentadas:**
+
+```json
+[
+  {"ref": "q1", "banca": "ENEM",   "ano": "2020", "trecho": "Um dos animais..."},
+  {"ref": "q2", "banca": "FUVEST", "ano": "2019", "trecho": "Considere o sistema..."},
+  {"ref": "q3", "banca": "UECE",   "ano": "0",    "trecho": "Em uma corda..."}
+]
+```
+
+`ref` é um identificador interno seu (ex: índice da questão). `trecho` deve
+ter os primeiros 100–150 caracteres do enunciado em texto puro, sem LaTeX
+nem HTML, sem incluir a banca/ano.
+
+**Execute:**
+
+```bash
+echo '<JSON acima>' | python .agents/skills/deduplicacao/scripts/deduplicador.py check-batch
+```
+
+Ou salve em arquivo e use redirect:
+
+```bash
+python .agents/skills/deduplicacao/scripts/deduplicador.py check-batch < /tmp/lote.json
+```
+
+**Saída (JSON no stdout):**
+
+```json
+[
+  {"ref": "q1", "status": "DUPLICATA", "id_banco": "00042"},
+  {"ref": "q2", "status": "NOVA"},
+  {"ref": "q3", "status": "DUPLICATA", "id_banco": "00117"}
+]
+```
+
+### Passo 3 (alternativo) — Modo single-shot
+
+Para uma única questão (ou debug pontual), use o modo individual:
 
 ```bash
 python .agents/skills/deduplicacao/scripts/deduplicador.py check "<banca>" "<ano>" "<trecho>"
 ```
 
-**Como fornecer o trecho:** primeiros 100–150 caracteres do enunciado em texto
-puro, sem LaTeX nem HTML, sem incluir a banca/ano.
-
-| Saída | Ação |
+| Saída no stdout | Ação |
 |---|---|
 | `NOVA` | Incluir normalmente no `.tex` |
 | `DUPLICATA:00042` | **Não incluir** — registrar na lista de ignoradas |
@@ -119,8 +174,9 @@ Isso evita falsos negativos do tipo: questão com `ano=0` na entrada vs `ano=202
 
 ## Checklist
 
-- [ ] Arquivo `.questbank.json` localizado? Se não, skip.
-- [ ] `deduplicador.py build` executado com sucesso?
+- [ ] `discover` executado para confirmar a presença de backup em `backup/`?
+- [ ] Se backup ausente: usuário avisado e workflow seguiu sem deduplicação?
+- [ ] Se backup presente: `deduplicador.py build` executado com sucesso?
 - [ ] Contagem do índice confere com `stats.questions` do backup?
 - [ ] Cada questão verificada antes de ser incluída no `.tex`?
 - [ ] Duplicatas excluídas (regular + adaptada)?

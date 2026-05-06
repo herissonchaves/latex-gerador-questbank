@@ -3,10 +3,11 @@ name: formatador-latex
 description: >
   Define o formato DSL LaTeX do QuestBank e todas as regras para escrever
   blocos \begin{questao}...\end{questao} válidos. Use esta skill no Passo 3
-  para escrever questoes.tex e no Passo 5 para gerar questoes.zip via script.
-  Consulte também para: macros disponíveis, taxonomia de metadados, Unicode
-  proibido, conversões LaTeX→HTML, regras de imagem, checklist de validação
-  e lista de sites oficiais para pesquisa de banca/ano.
+  para escrever saida/questoes.tex e no Passo 4 para validá-lo. Consulte
+  também para: macros disponíveis, taxonomia de metadados, Unicode proibido,
+  conversões LaTeX→HTML, regras de imagem, checklist de validação e lista
+  de sites oficiais para pesquisa de banca/ano. Para empacotar o ZIP final,
+  use a skill `empacotador-zip` no Passo 5.
 ---
 
 # Formato LaTeX do QuestBank (`questoes.tex`)
@@ -14,28 +15,28 @@ description: >
 ## Objetivo
 
 Escrever `saida/questoes.tex` com blocos `\begin{questao}` válidos para cada
-questão segmentada e gerar `saida/questoes.zip` dual-compatível com o app
-QuestBank e o Overleaf. O agente **não** gera JSON — único formato de saída
-é o `.tex` (DSL customizada convertida pelo servidor `questbank-server`).
+questão segmentada. O agente **não** gera JSON — único formato de saída é o
+`.tex` (DSL customizada convertida pelo servidor `questbank-server`).
+O empacotamento do ZIP final é responsabilidade da skill `empacotador-zip`.
 
 ## Entradas esperadas
 
 - Lista de questões segmentadas (Passo 2 / Passo 2.5)
-- `main.tex` na raiz do projeto (wrapper Overleaf — não editar)
 - Imagens referenciadas pelos marcadores `[IMAGEM]` nos textos extraídos
 
 ## Saída esperada
 
 - `saida/questoes.tex` — DSL QuestBank com todos os blocos `\begin{questao}`
-- `saida/questoes.zip` — ZIP dual-compatível gerado pelo `montador.py`
+
+> O ZIP final (`saida/questoes.zip`) é gerado em seguida pela skill
+> `empacotador-zip` (Passo 5).
 
 ## Passo a passo
 
 1. Gerar todos os IDs aleatórios de uma vez (ver seção "IDs aleatórios").
 2. Para cada questão: escrever bloco regular seguido do bloco adaptado (`A-ID`).
 3. Usar as tabelas de macros, taxonomia e regras abaixo como referência durante a escrita.
-4. Validar `questoes.tex` contra o checklist antes de prosseguir.
-5. Executar `montador.py` para empacotar o ZIP (ver seção "Gerar o ZIP").
+4. Validar `questoes.tex` contra o checklist antes de prosseguir para o Passo 5.
 
 ## Regras e restrições
 
@@ -53,25 +54,16 @@ QuestBank e o Overleaf. O agente **não** gera JSON — único formato de saída
 
 ---
 
-## ZIP dual-compatível (`saida/questoes.zip`)
-
-### Estrutura do ZIP
-
-```
-questoes.zip/
-  questoes.tex   ← DSL QuestBank — lida pelo servidor Python (app)
-  main.tex       ← wrapper LaTeX padrão — compilado pelo Overleaf
-  Imagem1.png    ← imagens sempre na RAIZ do ZIP (sem subpastas)
-  Imagem2.png
-```
-
-### Regra de caminhos de imagem
+## Regra de caminhos de imagem
 
 - Em `questoes.tex`: sempre `\imagem{ImagemN.png}` — **só o nome, nunca pasta**
 - Use **numeração sequencial global**: `Imagem1.png`, `Imagem2.png`…
   A contagem avança a cada nova imagem em todo o arquivo (não reinicia por questão)
 - **Nunca** use nomes descritivos (`grafico-energia.png`, `circuito.png`, etc.)
 - **Questões adaptadas reutilizam exatamente o mesmo nome** da regular mãe
+
+> No ZIP final montado pelo `empacotador-zip`, todas as imagens ficam na **raiz**
+> (sem subpastas) — por isso a regra de "só o nome do arquivo" no `\imagem{}`.
 
 ### ⚠ Unicode matemático é proibido em `questoes.tex`
 
@@ -227,16 +219,10 @@ Vírgula decimal: `$9{,}8\,\text{m/s}^2$`
 
 ---
 
-## Gerar o ZIP (Passo 5)
+## Próximo passo (Passo 5)
 
-Execute o script dedicado:
-
-```bash
-python .agents/skills/formatador-latex/scripts/montador.py
-```
-
-O script lê `saida/questoes.tex`, encontra as imagens referenciadas, copia
-`main.tex` e monta o ZIP em `saida/questoes.zip`.
+Após o `questoes.tex` passar no checklist abaixo, acione a skill
+**`empacotador-zip`** para gerar `saida/questoes.zip`.
 
 ---
 

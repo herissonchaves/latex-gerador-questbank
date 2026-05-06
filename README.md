@@ -32,6 +32,7 @@ latex-gerador-questbank/
 ├── README.md              ← este arquivo
 ├── main.tex               ← wrapper LaTeX padrão para compilação no Overleaf
 ├── entrada/               ← coloque aqui seus arquivos de prova
+├── backup/                ← coloque aqui o último .questbank.json do app
 ├── saida/
 │   ├── questoes.tex       ← DSL QuestBank (gerado pelo agente)
 │   ├── main.tex           ← cópia do wrapper (gerada pelo agente)
@@ -45,10 +46,11 @@ latex-gerador-questbank/
         ├── deduplicacao/       ← filtra questões já existentes no banco
         │   └── scripts/
         │       └── deduplicador.py
-        ├── formatador-latex/   ← regras LaTeX + geração do ZIP
-        │   └── scripts/
-        │       └── montador.py
-        └── adaptacao/          ← gera versão NEE/AEE de cada questão
+        ├── formatador-latex/   ← regras LaTeX para escrever questoes.tex
+        ├── adaptacao/          ← gera versão NEE/AEE de cada questão
+        └── empacotador-zip/    ← empacota questoes.zip (TeX + main + imagens)
+            └── scripts/
+                └── montador.py
 ```
 
 ---
@@ -62,10 +64,13 @@ latex-gerador-questbank/
 ### 2. Adicionar as provas
 - Coloque PDFs, DOCXs, imagens ou HTMLs na pasta `entrada/`.
 
-### 3. (Opcional) Evitar duplicatas
-- Se quiser que o agente ignore questões já cadastradas no QuestBank,
-  coloque o arquivo de backup `*.questbank.json` (exportado pelo app) na
-  raiz do projeto ou em `entrada/`.
+### 3. Evitar duplicatas (recomendado)
+- Exporte um backup atualizado pelo app QuestBank.
+- Coloque o arquivo `questbank-backup-AAAA-MM-DD_HH-MM-SS.questbank.json`
+  na pasta **`backup/`** do projeto.
+- O agente sempre procura nessa pasta o backup mais recente e filtra
+  questões já cadastradas antes de gerar o `.tex`.
+- Se a pasta estiver vazia, o agente avisa e segue **sem** deduplicação.
 
 ### 4. Iniciar
 No chat do Antigravity, basta dizer:
